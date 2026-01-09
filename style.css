@@ -1,0 +1,71 @@
+/* obsidian-style.css */
+
+:root {
+  /* The "Perfect" Mid-Dark Palette */
+  --bg-main: #1e1e1e;          /* Obsidian primary bg */
+  --bg-surface: #262626;       /* Card/Note surface */
+  --text-main: #dcddde;        /* Soft white/grey text */
+  --text-muted: #8e8e8e;
+  --accent: #7566f0;           /* Classic Obsidian Purple */
+  --border: #3e3e3e;
+  
+  /* Note Color Variants (Muted & Deep) */
+  --note-yellow: #3a352a;      /* Muted Gold */
+  --note-blue: #2a313a;        /* Deep Steel Blue */
+  --note-red: #3a2a2a;         /* Muted Burgundy */
+  --note-green: #2a3a2f;       /* Deep Forest */
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* The Note Container */
+.obsidian-note {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Headings */
+.obsidian-note h1, h2, h3 {
+  color: var(--accent);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+/* Markdown-like Elements */
+code {
+  background: #111;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding-left: 15px;
+  margin: 15px 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Color Note Modifiers */
+.note-yellow { background-color: var(--note-yellow); border-color: #5a5035; }
+.note-blue   { background-color: var(--note-blue); border-color: #354a5a; }
+.note-red    { background-color: var(--note-red); border-color: #5a3535; }
+.note-green  { background-color: var(--note-green); border-color: #355a40; }
+
+/* Interactive States */
+.obsidian-note:hover {
+  border-color: var(--accent);
+  transition: border-color 0.3s ease;
+}
