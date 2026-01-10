@@ -69,3 +69,8 @@ blockquote {
   border-color: var(--accent);
   transition: border-color 0.3s ease;
 }
+
+/* Custom Heading Colors */
+.view-content h1 { color: #7566f0 !important; } /* Obsidian Purple */
+.view-content h2 { color: #4ec9b0 !important; } /* Teal/Greenish */
+.view-content h3 { color: #ce9178 !important; } /* Muted Orange */
